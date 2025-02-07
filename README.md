@@ -5,7 +5,6 @@
 [![GitHub forks](https://img.shields.io/github/forks/quachdoduy/Mikrotik-RouterOS-Script?logo=GitHub&style=flat&color=green)](https://github.com/quachdoduy/Mikrotik-RouterOS-Script/network)
 [![GitHub watchers](https://img.shields.io/github/watchers/quachdoduy/Mikrotik-RouterOS-Script?logo=GitHub&style=flat&color=blue)](https://github.com/quachdoduy/Mikrotik-RouterOS-Script/watchers)
 [![required RouterOS version](https://img.shields.io/badge/RouterOS-7.15.2-yellow?style=flat)](https://mikrotik.com/download/changelogs/)
-[![donate with](https://img.shields.io/badge/Like_it%3F-Donate!-orange?logo=githubsponsors&logoColor=orange&style=flat)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=A4ZXBD6YS2W8J)
 
 
 
