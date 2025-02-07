@@ -5,6 +5,8 @@
 [![GitHub forks](https://img.shields.io/github/forks/quachdoduy/Mikrotik-RouterOS-Script?logo=GitHub&style=flat&color=green)](https://github.com/quachdoduy/Mikrotik-RouterOS-Script/network)
 [![GitHub watchers](https://img.shields.io/github/watchers/quachdoduy/Mikrotik-RouterOS-Script?logo=GitHub&style=flat&color=blue)](https://github.com/quachdoduy/Mikrotik-RouterOS-Script/watchers)
 [![required RouterOS version](https://img.shields.io/badge/RouterOS-7.15.2-yellow?style=flat)](https://mikrotik.com/download/changelogs/)
+[![donate with paypal](https://img.shields.io/badge/Like_it%3F-Donate!-orange?logo=githubsponsors&logoColor=orange&style=flat)](https://paypal.me/quachdoduy)
+[![donate with buymeacoffe](https://img.shields.io/badge/Like_it%3F-Donate!-orange?logo=githubsponsors&logoColor=orange&style=flat)](https://buymeacoffee.com/quachdoduy)
 
 
 
@@ -12,11 +14,11 @@ Kịch bản (Script) này tôi viết trên hệ thống của công ty đối 
 
 > 💡 Nếu bạn có bất kỳ ý tưởng nào về kịch bản hoặc bạn chỉ muốn chia sẻ ý kiến ​​của mình, bạn có thể [Thảo luận](https://github.com/quachdoduy/Mikrotik-RouterOS-Script/discussions/), hoặc bạn có thể mở một [Vấn đề](https://github.com/quachdoduy/Mikrotik-RouterOS-Script/issues) nếu bạn tìm thấy lỗi
 
-## Ý tưởng ban đầu (Original idea):
+## Ý tưởng ban đầu (Original idea)
 - Tự động hóa tác vụ giám sát các kết nối WANs của thiết bị, cảnh báo đến Telegram và Slack.
 - Viết kịch bản (Script) theo tư duy tập trung hóa và có thể tái sử dụng cho các kịch bản đơn nhỏ lẻ.
 
-## Tính năng (Features):
+## Tính năng (Features)
 - Thiết lập các kênh thông báo (có thể lựa chọn):
     - Thông báo qua Email: gửi cảnh bảo đến Email được thiết lập để nhận các cảnh báo.
     - Thông báo qua Telegram: gửi cảnh báo đến Telegram được thiết lập để nhận các cảnh báo.
@@ -36,6 +38,24 @@ Kịch bản (Script) này tôi viết trên hệ thống của công ty đối 
     - Thực hiện sao lưu cấu hình thiết bị.
     - Thực hiện khởi động thiết bị.
 
-## Yêu cầu hệ thống (System requirements):
+## Yêu cầu hệ thống (System requirements)
 
-### Phần mềm (Software):
+### Phần mềm (Software)
+
+#### RouterOS
+Kịch bản (script) này được viết trên Hệ điều hành RouterOS'7.n' (chính xác là RouterOS'7.15.2') nên cần kiểm tra tính tương thích ngược với hệ điều hành RouterOS'6.n' và thấp hơn.
+
+#### Visual Code
+Kịch bản (script) này được viết trên phần mềm Visual Code của Microsoft với phần mở rộng tương thích.
+- [Visual Code](https://code.visualstudio.com/download)
+- [Extensions](https://github.com/devMikeUA/vscode_mikrotik_routeros_script)
+
+### Phần cứng (Hardware)
+Kịch bản (script) có khả năng làm tăng kích thước mỗi lần cập nhật nên cần lưu ý với các thiết bị có dung lượng lưu trữ 16MB trở xuống.
+
+Cấu hình cũng có khả năng tăng kích thước sau thời gian. Hẫn cẩn trọng và kiểm tra thường xuyên.
+
+## Thiết lập ban đầu (Initial setup)
+
+### Hẫy sẵn sàng (Get ready)!
+
