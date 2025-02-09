@@ -9,9 +9,9 @@
 # Please, keep this header if using this script. Thanks
 # ------------------- END HEADER ---------------------------------------
 
-# ================================================
+# ==========================================
 # GLOBAL CONFIGURATION THAT CAN BE CHANGED BY USER
-# ================================================
+# ==========================================
 
 # Set correct customer name to notify correct information.
 :global varCustomName "Crossian";
@@ -34,8 +34,8 @@
     # === WEBHOOK ===
     :global urlwebhook "https://hook.eu2.make.com/w1wx4rvmgiy73lo0if4am2cb02wff162";
     # === TELEGRAM ===
-    :global teleAPIToken "7939426553:AAFI0V09SxwuVK6Vpr7on2MIj1oFTK25u3U";
-    :global teleChatID "-1002057768020";
+    :global teleAPIToken "7048815678:AAFF_S1FdkabzvF3tD4ZlSvX9UNiAgDWjLQ";
+    :global teleChatID "-6891844488";
 
 
 # ===== HEALTH CHECK =====
