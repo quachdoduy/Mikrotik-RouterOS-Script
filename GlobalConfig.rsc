@@ -1,20 +1,20 @@
-# ------------------- HEADER -------------------------------------------
+# =============== HEADER ===============
 # RouterOS script: FunctionLibrary
-# Copyright (c) 2024-2025 Quach Do Duy <quachdoduy@gmail.com>
-#
-# requires RouterOS, version=7.15.2
-# Function library in global
-#
-# Created at 08/01/2025
-# Please, keep this header if using this script. Thanks
-# ------------------- END HEADER ---------------------------------------
+# Copyright (c) 2024-2025 
+#  Author: Quach Do Duy 
+#  Email: <quachdoduy@gmail.com>
+#  Git URL: /quachdoduy/Mikrotik-RouterOS-Script
+# --------------------------------------
+# Please, keep this header if using this script.
+# ============= END HEADER =============
 
-# ==========================================
-# GLOBAL CONFIGURATION THAT CAN BE CHANGED BY USER
-# ==========================================
+# ==============================
+# GLOBAL CONFIGURATION 
+# THAT CAN BE CHANGED BY USER
+# ==============================
 
 # Set correct customer name to notify correct information.
-:global varCustomName "Crossian";
+:global varCustomName "Customer ABC XYZ";
 
 # ===== NOTIFICATION =====
 
@@ -25,14 +25,14 @@
 
     # Configure settings for each notification method
     # === EMAIL ===
-    :global emailUser "device.monitor@gmail.com";
+    :global emailUser "ABC.XYZ@gmail.com";
     :global emailPassword "3m@il-S3cr3t";
     :global emailSMTPserver "smtp.gmail.com";
     :global emailSMTPport "465";
     :global emailUseTLS "yes";
     :global emailSendTo {"quachdoduy@gmail.com";"qis.comp@gmail.com"};
     # === WEBHOOK ===
-    :global urlwebhook "https://hook.eu2.make.com/w1wx4rvmgiy73lo0if4am2cb02wff162";
+    :global urlwebhook "https://hook.eu2.make.com/BxUIxTMKl8bUSSE4AkJIm4VGXDHN8dsP";
     # === TELEGRAM ===
     :global teleAPIToken "7048815678:AAFF_S1FdkabzvF3tD4ZlSvX9UNiAgDWjLQ";
     :global teleChatID "-6891844488";
@@ -53,7 +53,7 @@
     # === Nexthop of WANs ===
     #  This is Nexthop for check WANs status.
     #  Exam:  :global arrWANnexthop {"1.1.1.1";"2.2.2.2"};
-    :global arrWANnexthop {"203.210.148.84";"203.210.148.84"};
+    :global arrWANnexthop {"8.8.8.8";"8.8.4.4"};
     #  Proc: Script will check connection:
     #        From "WAN-1" has Interface name "pppoe-out1" to Nexthop "1.1.1.1"
     #        From "WAN-2" has Interface name "pppoe-out2" to Nexthop "2.2.2.2"
