@@ -1,17 +1,17 @@
-# ------------------- HEADER -------------------------------------------
+# =============== HEADER ===============
 # RouterOS script: FunctionLibrary
-# Copyright (c) 2024-2025 Quach Do Duy <quachdoduy@gmail.com>
-#
-# requires RouterOS, version=7.15.2
-# Function library in global
-#
-# Created at 08/01/2025
-# Please, keep this header if using this script. Thanks
-# ------------------- END HEADER ---------------------------------------
+# Copyright (c) 2024-2025 
+#  Author: Quach Do Duy 
+#  Email: <quachdoduy@gmail.com>
+#  Git URL: /quachdoduy/Mikrotik-RouterOS-Script
+# --------------------------------------
+# Please, keep this header if using this script.
+# ============= END HEADER =============
 
-# ==========================================
-# GLOBAL VARIABLES CANNOT BE CHANGED BY USER
-# ==========================================
+# ==============================
+# GLOBAL VARIABLES 
+# THAT CANNOT BE CHANGED BY USER
+# ==============================
 
 # VARIABLES FOR IDENTITY
 :global varIdentity [ /system/identity/get value-name=name ];
