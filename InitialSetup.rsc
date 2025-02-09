@@ -271,7 +271,7 @@ add name=GlobalFunction owner=admin policy=ftp,reboot,read,write,policy,test,pas
         :local voutGenString \"\";
         :local arrAlphabet (\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z\",\"A\",\"B\",\"C\",\"D\",\"E\",\"F\",\"G\",\"H\",\"I\",\"J\",\"K\",\"L\",\"M\",\"N\",\"O\",\"P\",\"Q\",\"R\",\"S\",\"T\",\"U\",\"V\",\"W\",\"X\",\"Y\",\"Z\");
         :local strNumber \"0123456789\";
-        :local strSpecial \"~!@#\\$%\";
+        :local strSpecial \"~!@#\\\$%\";
         :local strChars (\$strNumber . \$strSpecial);
         
         # declare local variable for pick charator in arrAlphabet
@@ -411,7 +411,7 @@ add name=GlobalFunction owner=admin policy=ftp,reboot,read,write,policy,test,pas
         # declare local variable for process
         :local vstrLogMessage;
 
-        :if (\$vinSeverity ~ (\"^(debug|error|info)\\$\")) do={
+        :if (\$vinSeverity ~ (\"^(debug|error|info)\\\$\")) do={
             :if (\$vinSeverity = \"debug\") do={ 
                 :set \$vstrLogMessage (\$vinName . \": \" . \$vinMessage);
                 :log debug \$vstrLogMessage; }
@@ -548,7 +548,7 @@ add name=GlobalFunction owner=admin policy=ftp,reboot,read,write,policy,test,pas
 
         # declare local / global variable for process
         :global urlwebhook;
-        :local strHttpData \"payload={\\"text\\":\\"\$strMessageText\\"}\";
+        :local strHttpData \"payload={\\\"text\\\":\\\"\$strMessageText\\\"}\";
         
         # process
         :if (\$strMessageText != \"nil\") do={
@@ -729,4 +729,6 @@ add name=GlobalFunction owner=admin policy=ftp,reboot,read,write,policy,test,pas
         [ /system/ reboot ];   
     };
 "
+run GlobalConfig
+run GlobalFunction
 };
