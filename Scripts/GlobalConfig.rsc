@@ -34,8 +34,8 @@
     # === WEBHOOK ===
     :global urlwebhook "https://hook.eu2.make.com/BxUIxTMKl8bUSSE4AkJIm4VGXDHN8dsP";
     # === TELEGRAM ===
-    :global teleAPIToken "7048815678:AAFF_S1FdkabzvF3tD4ZlSvX9UNiAgDWjLQ";
-    :global teleChatID "-6891844488";
+    :global teleAPIToken "0123456789:This_Is_Fake_API_Token_Telegram-xyz";
+    :global teleChatID "-9876543210";
 
 
 # ===== HEALTH CHECK =====
