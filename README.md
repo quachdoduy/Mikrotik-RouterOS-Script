@@ -92,3 +92,9 @@ Các thông tin cần chuẩn bị trước khi cài đặt.
 - Thực hiện chạy các Script 1 lần để khởi tạo các biến environment cho lần đầu.
     - GlobalConfig
     - GlobalFunction
+
+## Giai đoạn tiếp theo (Next Stage)
+
+- Hoàn thiện thêm phần hàm cho cập nhật cấu hình ban đầu để hạn chế việc chỉnh sửa trực tiếp trên Script.
+- Thêm hàm chạy lần đầu để kiểm tra trạng thái với mỗi lần khởi động lại thiết bị.
+- Khởi tạo các Scheduler tự động cho lần đầu khởi tạo.
