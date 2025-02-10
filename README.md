@@ -60,25 +60,30 @@ Cấu hình cũng có khả năng tăng kích thước sau thời gian. Hẫn c�
 ### Hẫy sẵn sàng (Get ready)!
 
 Các thông tin cần chuẩn bị trước khi cài đặt.
-1. Tên tắt của Tổ Chức sẽ được cài đặt vào biến *varCustomName*
-    - ví dụ: :global varCustomName "Customer ABC XYZ";
-2. Quyết định phương thức cảnh báo sẽ được cài đặt vào biến *arrSendNotify* "email" "telegram" "webhook"
-    - ví dụ: :global arrSendNotify {"email";"telegram";"webhook"};
-    - Các thông tin cài đặt chi tiết cho từng phương thức cảnh báo sẽ cấu hình chi tiết trong *GlobalConfig.rsc*
+1. Tên tắt của Tổ Chức sẽ được cài đặt vào biến **varCustomName**
+    - ví dụ: ':global varCustomName "Customer ABC XYZ";'
+2. Quyết định phương thức cảnh báo sẽ được cài đặt vào biến **arrSendNotify** "email" "telegram" "webhook"
+    - ví dụ: ':global arrSendNotify {"email";"telegram";"webhook"};'
+    - Các thông tin cài đặt chi tiết cho từng phương thức cảnh báo sẽ cấu hình chi tiết trong **GlobalConfig.rsc**
 3. Thông tin các kênh WANs cần giám sát.
-    - Số lượng WAN được khai báo trong biến *arrWANname*
-        - ví dụ: :global arrWANname {"WAN-1";"WAN-2"};
-    - Tên các interface kênh WANs trong biến *arrWANinterface*
-        - ví dụ: :global arrWANinterface {"pppoe-out1";"pppoe-out2"};
-    - Địa chỉ IPv4 Nexthop của các kênh WANs trong biến *arrWANnexthop*
-        - ví dụ: :global arrWANnexthop {"8.8.8.8";"8.8.4.4"};
+    - Số lượng WAN được khai báo trong biến **arrWANname**
+        - ví dụ: ':global arrWANname {"WAN-1";"WAN-2"};'
+    - Tên các interface kênh WANs trong biến **arrWANinterface**
+        - ví dụ: ':global arrWANinterface {"pppoe-out1";"pppoe-out2"};'
+    - Địa chỉ IPv4 Nexthop của các kênh WANs trong biến **arrWANnexthop**
+        - ví dụ: ':global arrWANnexthop {"8.8.8.8";"8.8.4.4"};'
 4. Thông tin các nguồn điện cần giám sát.
-    - Số lượng PSUs được khai báo trong biến *arrPSUname*
-        - ví dụ: :global arrPSUname {"PSU-1";"PSU-2"};
-    - Các ID trong bảng SystemHealth được khai báo trong biến *arrPSUhealthID*
-        - ví dụ: :global arrPSUhealthID {"8";"9"};
+    - Số lượng PSUs được khai báo trong biến **arrPSUname**
+        - ví dụ: ':global arrPSUname {"PSU-1";"PSU-2"};'
+    - Các ID trong bảng SystemHealth được khai báo trong biến **arrPSUhealthID**
+        - ví dụ: ':global arrPSUhealthID {"8";"9"};'
 5. Thông tin các nguồn nhiệt cần giám sát.
-    - Số lượng nguồn nhiệt được khai báo trong biến *arrTemperature*
-        - ví dụ: :global arrTemperature {"Board-Temperature";"CPU-Temperature";"Switch-Temperature"};
-    - Các ID trong bảng SystemHealth được khai báo trong biến *arrTemperatureID*
-        - ví dụ: :global arrTemperatureID {"7";"0";"1"};
+    - Số lượng nguồn nhiệt được khai báo trong biến **arrTemperature**
+        - ví dụ: ':global arrTemperature {"Board-Temperature";"CPU-Temperature";"Switch-Temperature"};'
+    - Các ID trong bảng SystemHealth được khai báo trong biến **arrTemperatureID**
+        - ví dụ: ':global arrTemperatureID {"7";"0";"1"};'
+
+### Cài đặt (Installing)
+
+- Trên bộ định tuyến, cấu hình giao diện mạng cơ bản với địa chỉ IP bạn chọn. Chỉ đủ để có thể sao chép tệp.
+- Tải lên (Upload) **InitialSetup.rsc** và nhập (Import) bằng câu lệnh: '/import InitialSetup.rsc'
