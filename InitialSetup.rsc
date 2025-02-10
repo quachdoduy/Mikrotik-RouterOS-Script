@@ -82,6 +82,7 @@ add name=GlobalConfig owner=admin policy=ftp,reboot,read,write,policy,test,passw
         #  Note:  SH_ID mean ID in System Health table, you can get it by use command [/system/health/ print]
         :global arrTemperatureID {\"7\";\"0\";\"1\"};
 "
+run [find name=GlobalConfig]
 remove [find name=GlobalFunction]
 add name=GlobalFunction owner=admin policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive source="
     # =============== HEADER ===============
@@ -721,6 +722,34 @@ add name=GlobalFunction owner=admin policy=ftp,reboot,read,write,policy,test,pas
         [ /system/ reboot ];   
     };
 "
-run GlobalConfig
-run GlobalFunction
+run [find name=GlobalFunction]
+remove [find name=PowerOn]
+add name=PowerOn owner=admin policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive source="
+    # =============== HEADER ===============
+    # RouterOS script: FunctionLibrary
+    # Copyright (c) 2024-2025 
+    #  Author: Quach Do Duy 
+    #  Email: <quachdoduy@gmail.com>
+    #  Git URL: /quachdoduy/Mikrotik-RouterOS-Script
+    # --------------------------------------
+    # Please, keep this header if using this script.
+    # ============= END HEADER =============
+
+    # declare for call global function 
+    :global funcHealthCheck;
+    :global funcSendNotification;
+    :global funcLogPrint;
+
+    # process
+    do {
+        [ /system/script/run [find name=GlobalConfig]];
+        [ /system/script/run [find name=GlobalFunction]];
+        :delay 30s;
+        \$funcSendNotification (\"Warning: Completed Power on\");
+        \$funcLogPrint info \"Power-On\" \"Completed Power on.\";
+        :delay 15s;
+        \$funcHealthCheck;
+    };
+"
+run [find name=PowerOn]
 };
