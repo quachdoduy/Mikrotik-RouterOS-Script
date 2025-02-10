@@ -87,3 +87,8 @@ Các thông tin cần chuẩn bị trước khi cài đặt.
 
 - Trên bộ định tuyến, cấu hình giao diện mạng cơ bản với địa chỉ IP bạn chọn. Chỉ đủ để có thể sao chép tệp.
 - Tải lên (Upload) **InitialSetup.rsc** và nhập (Import) bằng câu lệnh: `/import InitialSetup.rsc`
+- Thực hiện cập nhật chỉnh sửa các cấu hình ở phần trên vào Script **GlobalConfig** và thực hiện lưu cấu hinh.
+    - *Sẽ cập nhật thêm phần nhập cấu hinh ban đầu qua hàm khởi tạo trong phiên bản sau.*
+- Thực hiện chạy các Script 1 lần để khởi tạo các biến environment cho lần đầu.
+    - GlobalConfig
+    - GlobalFunction
