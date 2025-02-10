@@ -726,7 +726,7 @@ run [find name=GlobalFunction]
 remove [find name=PowerOn]
 add name=PowerOn owner=admin policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive source="
     # =============== HEADER ===============
-    # RouterOS script: FunctionLibrary
+    # RouterOS script: PowerOn
     # Copyright (c) 2024-2025 
     #  Author: Quach Do Duy 
     #  Email: <quachdoduy@gmail.com>
@@ -751,11 +751,10 @@ add name=PowerOn owner=admin policy=ftp,reboot,read,write,policy,test,password,s
         \$funcHealthCheck;
     };
 "
-run [find name=PowerOn]
 remove [find name=HealthCheck]
 add name=HealthCheck owner=admin policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive source="
     # =============== HEADER ===============
-    # RouterOS script: FunctionLibrary
+    # RouterOS script: HealthCheck
     # Copyright (c) 2024-2025 
     #  Author: Quach Do Duy 
     #  Email: <quachdoduy@gmail.com>
@@ -772,5 +771,41 @@ add name=HealthCheck owner=admin policy=ftp,reboot,read,write,policy,test,passwo
         \$funcHealthCheck;
     };
 "
-run [find name=funcHealthCheck]
+remove [find name=Reboot]
+add name=Reboot owner=admin policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive source="
+    # =============== HEADER ===============
+    # RouterOS script: Reboot
+    # Copyright (c) 2024-2025 
+    #  Author: Quach Do Duy 
+    #  Email: <quachdoduy@gmail.com>
+    #  Git URL: /quachdoduy/Mikrotik-RouterOS-Script
+    # --------------------------------------
+    # Please, keep this header if using this script.
+    # ============= END HEADER =============
+
+    # declare local / global variable for process
+    :global varCustomName;
+    :global varIdentity;
+    :global varSystemID;
+
+    # declare for call global function 
+    :global funcSendNotification;
+    :global funcLogPrint;
+    :global funcSoundAlert;
+    :global funcGetDate;
+
+    # process
+    do {
+        \$funcSendNotification (\"Info: \" . \$varCustomName . \" | \" . \$varIdentity . \" | \" . \$varSystemID . \" in the process of rebooting for maintenance.\");
+        \$funcLogPrint info \"Reboot\" (\"Info: Rebooting for maintenance.\");
+        \$funcSoundAlert \"beep\";
+        \$funcGetDate \"YYYYMMDD\";
+
+        # backup config
+        [ :export file=(\"config_\" . \$varSysDate . \".rsc\") ];
+        [ :delay 60s ];
+        [ /system/reboot ];
+    };
+"
+
 };
