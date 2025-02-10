@@ -688,13 +688,13 @@ add name=GlobalFunction owner=admin policy=ftp,reboot,read,write,policy,test,pas
             }
         }
         # key log
-        \$funcLogPrint info \"funcSendTelegram\" \"Completed Health Check.\";
+        \$funcLogPrint info \"funcHealthCheck\" \"Completed Health Check.\";
     };
 
 
     # [funcReboot]
     #  Run process reboot system for maintenance.
-    #  Syntax: [funcHealthCheck]
+    #  Syntax: [funcReboot]
     :set funcReboot do={
         # declare input variable
 
