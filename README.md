@@ -89,12 +89,11 @@ Các thông tin cần chuẩn bị trước khi cài đặt.
 - Tải lên (Upload) **InitialSetup.rsc** và nhập (Import) bằng câu lệnh: `/import InitialSetup.rsc`
 - Thực hiện cập nhật chỉnh sửa các cấu hình ở phần trên vào Script **GlobalConfig** và thực hiện lưu cấu hinh.
     - *Sẽ cập nhật thêm phần nhập cấu hinh ban đầu qua hàm khởi tạo trong phiên bản sau.*
-- Thực hiện chạy các Script 1 lần để khởi tạo các biến environment cho lần đầu.
-    - GlobalConfig
-    - GlobalFunction
+- Thực hiện chạy lại Script **GlobalConfig** để cập nhật lại giá trị mới cho các biến Environment.
+    - `/system/script/run GlobalConfig;`
 
 ## Giai đoạn tiếp theo (Next Stage)
 
+- Thêm hàm chạy lần đầu để kiểm tra trạng thái với mỗi lần khởi động lại thiết bị. **(Done: 10/Feb/2025)**
+- Khởi tạo các Scheduler tự động cho lần đầu khởi tạo. **(Done: 10/Feb/2025)**
 - Hoàn thiện thêm phần hàm cho cập nhật cấu hình ban đầu để hạn chế việc chỉnh sửa trực tiếp trên Script.
-- Thêm hàm chạy lần đầu để kiểm tra trạng thái với mỗi lần khởi động lại thiết bị.
-- Khởi tạo các Scheduler tự động cho lần đầu khởi tạo.
