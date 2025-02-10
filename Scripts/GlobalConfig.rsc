@@ -37,7 +37,6 @@
     :global teleAPIToken "0123456789:This_Is_Fake_API_Token_Telegram-xyz";
     :global teleChatID "-9876543210";
 
-
 # ===== HEALTH CHECK =====
 
 # Set number of WANs 
@@ -77,3 +76,9 @@
     #  Exam:  :global arrTemperatureID {"SH_ID";"SH_ID";"SH_ID"};
     #  Note:  SH_ID mean ID in System Health table, you can get it by use command [/system/health/ print]
     :global arrTemperatureID {"7";"0";"1"};
+
+# ===== INSTALL CONFIG =====
+
+# ===========================
+# GLOBAL FUNCTION DECLARATION
+# ===========================
