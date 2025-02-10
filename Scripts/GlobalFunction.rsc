@@ -73,7 +73,6 @@
 
 # Functions use to processing
 :global funcHealthCheck;
-:global funcReboot;
 
 # ===========================
 # GLOBAL FUNCTION PROCESSING
@@ -603,34 +602,4 @@
     }
     # key log
     $funcLogPrint info "funcHealthCheck" "Completed Health Check.";
-};
-
-
-# [funcReboot]
-#  Run process reboot system for maintenance.
-#  Syntax: [funcReboot]
-:set funcReboot do={
-    # declare input variable
-
-    # declare local / global variable for process
-    :global varCustomName;
-    :global varIdentity;
-    :global varSystemID;
-
-    # declare for call global function 
-    :global funcSendNotification;
-    :global funcLogPrint;
-    :global funcSoundAlert;
-    :global funcGetDate;
-    
-    # process
-    $funcSendNotification ("Info: " . $varCustomName . " | " . $varIdentity . " | " . $varSystemID . " in the process of rebooting for maintenance.");
-    $funcLogPrint info "Reboot" ("Info: Rebooting for maintenance.");
-    $funcSoundAlert "beep";
-    $funcGetDate "YYYYMMDD";
-
-    # backup config
-    [ :export file=("config_" . $varSysDate . ".rsc") ];
-    [ :delay 30s ];
-    [ /system/ reboot ];   
 };
