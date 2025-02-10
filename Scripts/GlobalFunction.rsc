@@ -72,7 +72,6 @@
 :global funcSendNotification;
 
 # Functions use to processing
-:global funcStartup;
 :global funcHealthCheck;
 :global funcReboot;
 
@@ -501,13 +500,6 @@
         $funcSendWebhook ($strMessageText);
       }
     }
-};
-
-
-# [funcStartup]
-#  Processin for valid check when device startup.
-:set funcStartup do={
-
 };
 
 
