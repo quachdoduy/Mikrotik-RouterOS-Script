@@ -158,7 +158,6 @@ add name=GlobalFunction owner=admin policy=ftp,reboot,read,write,policy,test,pas
     :global funcSendNotification;
 
     # Functions use to processing
-    :global funcStartup;
     :global funcHealthCheck;
     :global funcReboot;
 
@@ -587,13 +586,6 @@ add name=GlobalFunction owner=admin policy=ftp,reboot,read,write,policy,test,pas
             \$funcSendWebhook (\$strMessageText);
         }
         }
-    };
-
-
-    # [funcStartup]
-    #  Processin for valid check when device startup.
-    :set funcStartup do={
-
     };
 
 
