@@ -807,5 +807,11 @@ add name=Reboot owner=admin policy=ftp,reboot,read,write,policy,test,password,sn
         [ /system/reboot ];
     };
 "
-
+/system scheduler
+remove [find name=skdPowerOn]
+add name=skdPowerOn start-time=startup on-event="[/system/script/run PowerOn];"
+remove [find name=skdHealthCheck]
+add name=skdHealthCheck start-time=00:00:00 interval=00:05:00 on-event="[/system/script/run HealthCheck];"
+remove [find name=skdReboot]
+add name=skdReboot start-time=23:58:00 interval=48h on-event="[/system/script/run Reboot];"
 };
