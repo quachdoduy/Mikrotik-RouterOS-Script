@@ -752,4 +752,25 @@ add name=PowerOn owner=admin policy=ftp,reboot,read,write,policy,test,password,s
     };
 "
 run [find name=PowerOn]
+remove [find name=HealthCheck]
+add name=HealthCheck owner=admin policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive source="
+    # =============== HEADER ===============
+    # RouterOS script: FunctionLibrary
+    # Copyright (c) 2024-2025 
+    #  Author: Quach Do Duy 
+    #  Email: <quachdoduy@gmail.com>
+    #  Git URL: /quachdoduy/Mikrotik-RouterOS-Script
+    # --------------------------------------
+    # Please, keep this header if using this script.
+    # ============= END HEADER =============
+
+    # declare for call global function 
+    :global funcHealthCheck;
+
+    # process
+    do {
+        \$funcHealthCheck;
+    };
+"
+run [find name=funcHealthCheck]
 };
